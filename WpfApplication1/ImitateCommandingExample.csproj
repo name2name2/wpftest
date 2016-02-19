@@ -71,6 +71,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -88,27 +90,37 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="OrderModule.cs" />
-    <Compile Include="OrdersCommands.cs" />
-    <Compile Include="OrdersToolBar.xaml.cs">
-      <DependentUpon>OrdersToolBar.xaml</DependentUpon>
+    <Compile Include="Converter%28D%29\DateConverter.cs" />
+    <Compile Include="Converter%28D%29\ErrorConverter.cs" />
+    <Compile Include="Converter%28D%29\StringToNullableNumberConverter.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="OrderModule%28D%29.cs" />
+    <Compile Include="OrdersCommands%28D%29.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="ViewModel\OrdersEditorViewModel%28D%29.cs" />
+    <Compile Include="OrdersToolBar%28D%29.xaml.cs">
+      <DependentUpon>OrdersToolBar%28D%29.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Services\IOrdersRepository.cs" />
-    <Compile Include="Services\Order.cs" />
-    <Compile Include="Services\OrdersRepository.cs" />
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
+    <Compile Include="Services%28D%29\IOrdersRepository.cs" />
+    <Compile Include="Services%28D%29\Order.cs" />
+    <Compile Include="Services%28D%29\OrdersRepository.cs" />
+    <Compile Include="ViewModel\OrderViewModel%28D%29.cs" />
+    <Compile Include="Views\OrdersEditorView.xaml.cs">
+      <DependentUpon>OrdersEditorView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Page Include="OrdersToolBar.xaml">
+    <Page Include="OrdersToolBar%28D%29.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\OrdersEditorView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -141,9 +153,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -33,11 +33,11 @@ namespace WpfApplication1.ViewModel
         //主要只有在set的時候  要加上通知NotifyPropertyChange  用NotifyPropertyChane通知
         //PropertyChanged event 
         #region Order Properties - OrderName, DeliveryDate, Quantity, Price, Shipping, Total
-        
-        public string MyProperty
+
+        public string OrderName
         {
             get { return _order.Name; }
-            set { _order.Name = value; NotifyPropertyChanged("orderName");}
+            set { _order.Name = value; NotifyPropertyChanged("OrderName"); }
         }
 
         public DateTime DeliveryDate

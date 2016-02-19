@@ -18,7 +18,6 @@ namespace WpfApplication1.Services
                 string orderName = String.Format(CultureInfo.CurrentCulture, "Order {0}", i);
                 orders.Add(new Order { Name = orderName, DeliveryDate = DateTime.Today.AddDays(i) });
             }
-
             return orders;
         }
     }
